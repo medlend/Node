@@ -9,7 +9,9 @@
   "author": "med.lendolsi",
   "license": "ISC",
     "dependencies": {
-    "express": "^4.14.0"
+    "express": "^*",
+    "mongodb": "^*",
+    "mongoose": "^*"
 
   }
 }
