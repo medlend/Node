@@ -36,3 +36,13 @@ module.exports.creat= function(){
 
     categorie1.save(function (err) {if (err) console.log ('Error on save!')});
 }
+
+
+Categorie.find({}, function(err, categories) {
+  if (err) throw err;
+
+  // object of all the categories
+  console.log(categories);
+});
+
+// https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications

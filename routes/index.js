@@ -19,7 +19,32 @@ router.get('/med', function(req, res){
 });
 
 
+router.get('/lend', function(req, res){
 
 
+	console.log('lend request');
+	
+Categorie.find(function (err, docs) {
+    console.log(docs);
+    res.json(docs);
+  });
+
+});
+
+router.get('/lend/:id', function(req, res){
+
+
+	var id = req.params.id;
+  console.log(id);
+	
+Categorie.findById(id, function(err, categorie) {
+  if (err) throw err;
+
+  // show the one Categorie
+  console.log(categorie);
+  res.json(categorie);
+});
+
+});
 
 module.exports = router;
